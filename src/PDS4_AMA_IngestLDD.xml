@@ -367,6 +367,21 @@
                     <value_data_type>ASCII_Real</value_data_type>
                 </DD_Value_Domain>
             </DD_Attribute>
+
+	        
+           <DD_Attribute>
+                <name>level_unit</name>
+                <version_id>1.0</version_id>
+                <local_identifier>level_unit</local_identifier>
+		<nillable_flag>false</nillable_flag>
+                <submitter_name>Victoria Hartwick</submitter_name>
+                <definition>The level_unit attribute provides the unit for the vertical grid, e.g. km, Pa, m</definition>
+                <DD_Value_Domain>
+                    <enumeration_flag>false</enumeration_flag>
+                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+                </DD_Value_Domain>
+            </DD_Attribute>
+ 
     
 	        <DD_Attribute>
 	            <name>postprocessing_methods</name>
@@ -1060,7 +1075,13 @@
 	                            <reference_type>attribute_of</reference_type>
 	                            <minimum_occurrences>0</minimum_occurrences>
 	                            <maximum_occurrences>1</maximum_occurrences>
-	                        </DD_Association>	                
+	                        </DD_Association>	
+			        <DD_Association>
+	                            <identifier_reference>level_unit</identifier_reference>
+	                            <reference_type>attribute_of</reference_type>
+	                            <minimum_occurrences>0</minimum_occurrences>
+	                            <maximum_occurrences>1</maximum_occurrences>
+	                        </DD_Association>	
 	                        <DD_Association>
 	                            <identifier_reference>start_time</identifier_reference>
 	                            <reference_type>attribute_of</reference_type>
