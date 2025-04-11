@@ -3,7 +3,7 @@
 >>  INFO IM Version Id: 1.23.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Fri Apr 11 16:55:14 UTC 2025
+>>  INFO Date: Fri Apr 11 19:42:57 UTC 2025
 >>  INFO PARENT_DIR: /tmp/lddtool-15.2.4/Data/
 
 >>> ERROR Class:0001_NASA_PDS_1.ama.Variable  Association:ama:dimensions  Attribute: ama:dimensions - Missing Attribute
@@ -46,10 +46,11 @@
 >>> WARNING Attribute: <vertical_grid_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
 >>> WARNING Attribute: <model_timestep_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
 >>> WARNING Attribute: <time_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <level_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
 >>> WARNING Attribute: <units> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
 
  -- LDDTool Execution Summary --
-     7 warning(s)
+     8 warning(s)
      2 error(s)
      0 fatal error(s)
 

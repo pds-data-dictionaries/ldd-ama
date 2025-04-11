@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Apr 11 16:55:14 UTC 2025
+   Time                   Fri Apr 11 19:42:57 UTC 2025
    Common Schema          [PDS4_PDS_1N00.xsd]
    Common Schematron      [PDS4_PDS_1N00.sch]
    IM Version Id:         1.23.0.0
@@ -29,8 +29,8 @@ Parameters:
 
 Summary:
    Classes                7
-   Attributes             54
-   Associations           69
+   Attributes             55
+   Associations           70
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -172,6 +172,11 @@ Parsed Input - Attributes:
    version                1.23
    value data type        ASCII_Real
    description            The bottom_level attribute provides the bottom most coverage expressed in pressure level.
+
+   name                   level_unit
+   version                1.23
+   value data type        ASCII_Short_String_Collapsed
+   description            The level_unit attribute provides the unit for the vertical grid, e.g. km, Pa, m
 
    name                   postprocessing_methods
    version                1.23
@@ -467,6 +472,11 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      ama:bottom_level
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ama:level_unit
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
