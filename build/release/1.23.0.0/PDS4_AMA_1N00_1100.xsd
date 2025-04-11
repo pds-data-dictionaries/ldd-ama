@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 XML/Schema for Name Space Id:ama  Version:1.0.0.0 - Wed Feb 12 20:21:19 UTC 2025 -->
+  <!-- PDS4 XML/Schema for Name Space Id:ama  Version:1.1.0.0 - Fri Apr 11 16:55:14 UTC 2025 -->
   <!-- Generated from the PDS4 Information Model Version 1.23.0.0 - System Build 15.0 -->
   <!-- *** This PDS4 product schema is an operational deliverable. *** -->
   <!--                                                                           -->
   <!--               Dictionary Stack                                            -->
   <!-- 1.23.0.0 - pds: - Common Dictionary                                       -->
-  <!-- 1.0.0.0 - ama: - Atmosphere                                               -->
+  <!-- 1.1.0.0 - ama: - Atmosphere                                               -->
   <!--                                                                           -->
   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://pds.nasa.gov/pds4/ama/v1"
@@ -13,7 +13,7 @@
     xmlns:pds="http://pds.nasa.gov/pds4/pds/v1"
     elementFormDefault="qualified"
     attributeFormDefault="unqualified"
-    version="1.0.0.0">
+    version="1.1.0.0">
  
     <xs:import namespace="http://pds.nasa.gov/pds4/pds/v1" schemaLocation="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd"/>
  
@@ -50,8 +50,8 @@
       <xs:element name="coord_name" type="ama:coord_name" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="standard_name" type="ama:standard_name" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="formula_terms" type="ama:formula_terms" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="dimensions" type="ama:dimensions" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="dim_name" type="ama:dim_name" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="interval" type="ama:interval" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="units" type="ama:units" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="axis" type="ama:axis" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="positive" type="ama:positive" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -82,6 +82,7 @@
       <xs:element name="bottom_level" type="ama:bottom_level" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="start_time" type="ama:start_time" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="end_time" type="ama:end_time" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="time_unit" type="ama:time_unit" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="postprocessing_methods" type="ama:postprocessing_methods" minOccurs="0" maxOccurs="1"> </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -116,9 +117,9 @@
         the python script </xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="File_Description" type="ama:File_Description" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Variable" type="ama:Variable" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="Coordinate" type="ama:Coordinate" minOccurs="0" maxOccurs="1"> </xs:element>
+      <xs:element name="File_Description" type="ama:File_Description" minOccurs="1" maxOccurs="1"> </xs:element>
+      <xs:element name="Variable" type="ama:Variable" minOccurs="1" maxOccurs="unbounded"> </xs:element>
+      <xs:element name="Coordinate" type="ama:Coordinate" minOccurs="1" maxOccurs="unbounded"> </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -134,6 +135,7 @@
         new vertical grid</xs:documentation>
     </xs:annotation>
     <xs:sequence>
+      <xs:element name="description" type="ama:description" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="horizontal_grid_type" type="ama:horizontal_grid_type" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="model_resolution" type="ama:model_resolution" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="model_resolution_unit" type="ama:model_resolution_unit" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -168,7 +170,6 @@
       <xs:element name="long_name" type="ama:long_name" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="fieldnam" type="ama:fieldnam" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="standard_name" type="ama:standard_name" minOccurs="0" maxOccurs="1"> </xs:element>
-      <xs:element name="dimensions" type="ama:dimensions" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="dim_name" type="ama:dim_name" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="units" type="ama:units" minOccurs="0" maxOccurs="1"> </xs:element>
       <xs:element name="level_type" type="ama:level_type" minOccurs="0" maxOccurs="1"> </xs:element>
@@ -310,8 +311,10 @@
 
   <xs:simpleType name="description">
     <xs:annotation>
-      <xs:documentation>any additional description of the variable,
-        processing, etc</xs:documentation>
+      <xs:documentation>he description attribute can be used to describe
+        the specific simulation configuration, including specific
+        inputs, parameterizations, variable, processing, etc in greater
+        detail.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
@@ -322,17 +325,6 @@
   <xs:simpleType name="dim_name">
     <xs:annotation>
       <xs:documentation>The names of dimensions the variable in the
-        file</xs:documentation>
-    </xs:annotation>
-    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
-     <xs:minLength value="1"/>
-     <xs:maxLength value="255"/>
-	   </xs:restriction>
-  </xs:simpleType>
-
-  <xs:simpleType name="dimensions">
-    <xs:annotation>
-      <xs:documentation>The dimensions of the variable in the
         file</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
@@ -438,6 +430,18 @@
 	   </xs:restriction>
   </xs:simpleType>
 
+  <xs:simpleType name="interval">
+    <xs:annotation>
+      <xs:documentation>The interval size of the coordinate space, used
+        for uniform grids, specify 'non-uniform' if coordinate grid
+        spacing is non-uniform.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
   <xs:simpleType name="level_type">
     <xs:annotation>
       <xs:documentation>level/model/height at which variable is
@@ -484,7 +488,7 @@
 
   <xs:simpleType name="memory_order">
     <xs:annotation>
-      <xs:documentation>The dimensions of the variable in the
+      <xs:documentation>The memory order of the variable in the
         file</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
@@ -708,6 +712,17 @@
     <xs:annotation>
       <xs:documentation>The start_time attribute provides the coverage
         start time expressed in any format of time</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="pds:ASCII_Short_String_Collapsed">
+     <xs:minLength value="1"/>
+     <xs:maxLength value="255"/>
+	   </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="time_unit">
+    <xs:annotation>
+      <xs:documentation>The time_unit attribute provides the unit of
+        time in the output file.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="pds:ASCII_Short_String_Collapsed">
      <xs:minLength value="1"/>
