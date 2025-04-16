@@ -2,12 +2,12 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        15.2.4
-   LDD Version Id:        1.0.0.0
+   LDD Version Id:        1.1.0.0
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Feb 12 20:21:19 UTC 2025
+   Time                   Fri Apr 11 19:42:57 UTC 2025
    Common Schema          [PDS4_PDS_1N00.xsd]
    Common Schematron      [PDS4_PDS_1N00.sch]
    IM Version Id:         1.23.0.0
@@ -29,8 +29,8 @@ Parameters:
 
 Summary:
    Classes                7
-   Attributes             53
-   Associations           67
+   Attributes             55
+   Associations           70
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -39,14 +39,14 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               Atmosphere
-   LDD Version            1.0.0.0
+   LDD Version            1.1.0.0
    Full Name              Lyle Huber
    Steward                atm
    Namespace Id           ama
    Comment                
         This dictionary describes the modeling output generic variables
     
-   Last Modification Time 2024-11-21T12:00:00Z
+   Last Modification Time 2025-04-11T12:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -158,6 +158,11 @@ Parsed Input - Attributes:
    value data type        ASCII_Short_String_Collapsed
    description            The end_time attribute provides the coverage end time expressed in any format of time.
 
+   name                   time_unit
+   version                1.23
+   value data type        ASCII_Short_String_Collapsed
+   description            The time_unit attribute provides the unit of time in the output file.
+
    name                   top_level
    version                1.23
    value data type        ASCII_Real
@@ -167,6 +172,11 @@ Parsed Input - Attributes:
    version                1.23
    value data type        ASCII_Real
    description            The bottom_level attribute provides the bottom most coverage expressed in pressure level.
+
+   name                   level_unit
+   version                1.23
+   value data type        ASCII_Short_String_Collapsed
+   description            The level_unit attribute provides the unit for the vertical grid, e.g. km, Pa, m
 
    name                   postprocessing_methods
    version                1.23
@@ -193,15 +203,15 @@ Parsed Input - Attributes:
    value data type        ASCII_Short_String_Collapsed
    description            Optional Attribute to identify the variable with a specific standard name (see python script add metadata)
 
-   name                   dimensions
-   version                1.23
-   value data type        ASCII_Short_String_Collapsed
-   description            The dimensions of the variable in the file
-
    name                   dim_name
    version                1.23
    value data type        ASCII_Short_String_Collapsed
    description            The names of dimensions the variable in the file
+
+   name                   interval
+   version                1.23
+   value data type        ASCII_Short_String_Collapsed
+   description            The interval size of the coordinate space, used for uniform grids, specify 'non-uniform' if coordinate grid spacing is non-uniform.
 
    name                   units
    version                1.23
@@ -246,7 +256,7 @@ Parsed Input - Attributes:
    name                   memory_order
    version                1.23
    value data type        ASCII_Short_String_Collapsed
-   description            The dimensions of the variable in the file
+   description            The memory order of the variable in the file
 
    name                   catdesk
    version                1.23
@@ -271,7 +281,7 @@ Parsed Input - Attributes:
    name                   description
    version                1.23
    value data type        ASCII_Short_String_Collapsed
-   description            any additional description of the variable, processing, etc
+   description            he description attribute can be used to describe the specific simulation configuration, including specific inputs, parameterizations, variable, processing, etc in greater detail.
 
    name                   var_type
    version                1.23
@@ -368,6 +378,11 @@ Parsed Input - Classes:
 
    Associations
 
+      local identifier      ama:description
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
       local identifier      ama:horizontal_grid_type
       minimum occurrences   0
       maximum occurrences   1
@@ -461,12 +476,22 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
+      local identifier      ama:level_unit
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
       local identifier      ama:start_time
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
       local identifier      ama:end_time
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ama:time_unit
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -622,12 +647,12 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      ama:dimensions
+      local identifier      ama:dim_name
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
 
-      local identifier      ama:dim_name
+      local identifier      ama:interval
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
@@ -686,18 +711,18 @@ Parsed Input - Classes:
    Associations
 
       local identifier      ama:File_Description
-      minimum occurrences   0
+      minimum occurrences   1
       maximum occurrences   1
       reference type        component_of
 
       local identifier      ama:Variable
-      minimum occurrences   0
-      maximum occurrences   1
+      minimum occurrences   1
+      maximum occurrences   *
       reference type        component_of
 
       local identifier      ama:Coordinate
-      minimum occurrences   0
-      maximum occurrences   1
+      minimum occurrences   1
+      maximum occurrences   *
       reference type        component_of
 
    name                   AMA

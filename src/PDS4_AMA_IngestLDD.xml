@@ -8,7 +8,7 @@
     xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd">
 
     <name>Atmosphere</name>
-    <ldd_version_id>1.0.0.0</ldd_version_id>
+    <ldd_version_id>1.1.0.0</ldd_version_id>
     <dictionary_type>Discipline</dictionary_type>
     <full_name>Lyle Huber</full_name>
     <steward_id>atm</steward_id>
@@ -16,7 +16,7 @@
     <comment>
         This dictionary describes the modeling output generic variables
     </comment>
-    <last_modification_date_time>2024-11-21T12:00:00Z</last_modification_date_time>
+    <last_modification_date_time>2025-04-11T12:00:00Z</last_modification_date_time>
 
         <DD_Attribute>
             <name>type</name>
@@ -327,7 +327,20 @@
                 </DD_Value_Domain>
             </DD_Attribute>
 
-
+             <DD_Attribute>
+                 <name>time_unit</name>
+                 <version_id>1.0</version_id>
+                 <local_identifier>time_unit</local_identifier>
+                 <nillable_flag>false</nillable_flag>
+                 <submitter_name>Victoria Hartwick</submitter_name>
+                 <definition>The time_unit attribute provides the unit of time in the output file.</definition>
+                <DD_Value_Domain>
+                  <enumeration_flag>false</enumeration_flag>
+                  <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+                </DD_Value_Domain>
+            </DD_Attribute>
+    
+    
 
             <DD_Attribute>
                 <name>top_level</name>
@@ -354,6 +367,21 @@
                     <value_data_type>ASCII_Real</value_data_type>
                 </DD_Value_Domain>
             </DD_Attribute>
+
+	        
+           <DD_Attribute>
+                <name>level_unit</name>
+                <version_id>1.0</version_id>
+                <local_identifier>level_unit</local_identifier>
+		<nillable_flag>false</nillable_flag>
+                <submitter_name>Victoria Hartwick</submitter_name>
+                <definition>The level_unit attribute provides the unit for the vertical grid, e.g. km, Pa, m</definition>
+                <DD_Value_Domain>
+                    <enumeration_flag>false</enumeration_flag>
+                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+                </DD_Value_Domain>
+            </DD_Attribute>
+ 
     
 	        <DD_Attribute>
 	            <name>postprocessing_methods</name>
@@ -422,7 +450,7 @@
                 </DD_Value_Domain>
             </DD_Attribute>
 
-	        <DD_Attribute>
+<!--	        <DD_Attribute>
                 <name>dimensions</name>
                 <version_id>1.0</version_id>
                 <local_identifier>dimensions</local_identifier>
@@ -434,7 +462,7 @@
                     <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
                 </DD_Value_Domain>
             </DD_Attribute>
-
+-->
 
 	        <DD_Attribute>
                 <name>dim_name</name>
@@ -449,7 +477,21 @@
                 </DD_Value_Domain>
             </DD_Attribute>
 
-	        <DD_Attribute>
+
+            <DD_Attribute>
+                <name>interval</name>
+                <version_id>1.0</version_id>
+                <local_identifier>interval</local_identifier>
+                <nillable_flag>false</nillable_flag>
+                <submitter_name>Victoria Hartwick</submitter_name>
+                <definition>The interval size of the coordinate space, used for uniform grids, specify 'non-uniform' if coordinate grid spacing is non-uniform.</definition>
+                <DD_Value_Domain>
+                   <enumeration_flag>false</enumeration_flag>
+                   <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+               </DD_Value_Domain>
+            </DD_Attribute>
+    
+            <DD_Attribute>
                 <name>units</name>
                 <version_id>1.0</version_id>
                 <local_identifier>units</local_identifier>
@@ -560,7 +602,7 @@
                 <local_identifier>memory_order</local_identifier>
     	        <nillable_flag>false</nillable_flag>
                 <submitter_name>Victoria Hartwick</submitter_name>
-                <definition>The dimensions of the variable in the file</definition>
+                <definition>The memory order of the variable in the file</definition>
                 <DD_Value_Domain>
                     <enumeration_flag>false</enumeration_flag>
                     <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -629,7 +671,7 @@
                 <local_identifier>description</local_identifier>
 	            <nillable_flag>false</nillable_flag>
                 <submitter_name>Victoria Hartwick</submitter_name>
-                <definition>any additional description of the variable, processing, etc</definition>
+	            <definition>he description attribute can be used to describe the specific simulation configuration, including specific inputs, parameterizations, variable, processing, etc in greater detail.</definition>
                 <DD_Value_Domain>
                     <enumeration_flag>false</enumeration_flag>
                     <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
@@ -916,6 +958,12 @@
 	                <abstract_flag>false</abstract_flag>
 	                <element_flag>false</element_flag>
 	                <DD_Association>
+	                    <identifier_reference>description</identifier_reference>
+	                    <reference_type>attribute_of</reference_type>
+	                    <minimum_occurrences>0</minimum_occurrences>
+	                    <maximum_occurrences>1</maximum_occurrences>
+	                </DD_Association>	        
+	                <DD_Association>
 	                    <identifier_reference>horizontal_grid_type</identifier_reference>
 	                    <reference_type>attribute_of</reference_type>
 	                    <minimum_occurrences>0</minimum_occurrences>
@@ -1027,7 +1075,13 @@
 	                            <reference_type>attribute_of</reference_type>
 	                            <minimum_occurrences>0</minimum_occurrences>
 	                            <maximum_occurrences>1</maximum_occurrences>
-	                        </DD_Association>	                
+	                        </DD_Association>	
+			        <DD_Association>
+	                            <identifier_reference>level_unit</identifier_reference>
+	                            <reference_type>attribute_of</reference_type>
+	                            <minimum_occurrences>0</minimum_occurrences>
+	                            <maximum_occurrences>1</maximum_occurrences>
+	                        </DD_Association>	
 	                        <DD_Association>
 	                            <identifier_reference>start_time</identifier_reference>
 	                            <reference_type>attribute_of</reference_type>
@@ -1036,6 +1090,12 @@
 	                        </DD_Association>	                
 	                        <DD_Association>
 	                            <identifier_reference>end_time</identifier_reference>
+	                            <reference_type>attribute_of</reference_type>
+	                            <minimum_occurrences>0</minimum_occurrences>
+	                            <maximum_occurrences>1</maximum_occurrences>
+	                        </DD_Association>	                
+	                        <DD_Association>
+	                            <identifier_reference>time_unit</identifier_reference>
 	                            <reference_type>attribute_of</reference_type>
 	                            <minimum_occurrences>0</minimum_occurrences>
 	                            <maximum_occurrences>1</maximum_occurrences>
@@ -1221,19 +1281,19 @@
 	                            <reference_type>attribute_of</reference_type>
 	                            <minimum_occurrences>0</minimum_occurrences>
 	                            <maximum_occurrences>1</maximum_occurrences>
-	                        </DD_Association>	                
-	                        <DD_Association>
-	                            <identifier_reference>dimensions</identifier_reference>
-	                            <reference_type>attribute_of</reference_type>
-	                            <minimum_occurrences>0</minimum_occurrences>
-	                            <maximum_occurrences>1</maximum_occurrences>
-	                        </DD_Association>	                
+	                        </DD_Association>	                               
 	                        <DD_Association>
 	                            <identifier_reference>dim_name</identifier_reference>
 	                            <reference_type>attribute_of</reference_type>
 	                            <minimum_occurrences>0</minimum_occurrences>
 	                            <maximum_occurrences>1</maximum_occurrences>
 	                        </DD_Association>	                
+	                        <DD_Association>
+	                            <identifier_reference>interval</identifier_reference>
+	                            <reference_type>attribute_of</reference_type>
+	                            <minimum_occurrences>0</minimum_occurrences>
+	                            <maximum_occurrences>1</maximum_occurrences>
+	                        </DD_Association>	
 	                        <DD_Association>
 	                            <identifier_reference>units</identifier_reference>
 	                            <reference_type>attribute_of</reference_type>
@@ -1300,20 +1360,20 @@
                        <DD_Association>
                            <identifier_reference>File_Description</identifier_reference>
                            <reference_type>component_of</reference_type>
-                           <minimum_occurrences>0</minimum_occurrences>
+                           <minimum_occurrences>1</minimum_occurrences>
                            <maximum_occurrences>1</maximum_occurrences>
                        </DD_Association>	                        
                        <DD_Association>
                            <identifier_reference>Variable</identifier_reference>
                            <reference_type>component_of</reference_type>
-                           <minimum_occurrences>0</minimum_occurrences>
-                           <maximum_occurrences>1</maximum_occurrences>
+                           <minimum_occurrences>1</minimum_occurrences>
+                           <maximum_occurrences>*</maximum_occurrences> 
                        </DD_Association>	                        
                        <DD_Association>
                            <identifier_reference>Coordinate</identifier_reference>
                            <reference_type>component_of</reference_type>
-                           <minimum_occurrences>0</minimum_occurrences>
-                           <maximum_occurrences>1</maximum_occurrences>
+                           <minimum_occurrences>1</minimum_occurrences>
+                           <maximum_occurrences>*</maximum_occurrences> 
                        </DD_Association>   
                    </DD_Class>
 
