@@ -1,13 +1,13 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        15.2.4
-   LDD Version Id:        1.1.0.0
+   LDDTool Version        15.3.0
+   LDD Version Id:        1.2.0.0
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Fri Apr 11 19:42:57 UTC 2025
+   Time                   Thu May 29 20:31:19 UTC 2025
    Common Schema          [PDS4_PDS_1N00.xsd]
    Common Schematron      [PDS4_PDS_1N00.sch]
    IM Version Id:         1.23.0.0
@@ -39,14 +39,14 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               Atmosphere
-   LDD Version            1.1.0.0
+   LDD Version            1.2.0.0
    Full Name              Lyle Huber
    Steward                atm
    Namespace Id           ama
    Comment                
         This dictionary describes the modeling output generic variables
     
-   Last Modification Time 2025-04-11T12:00:00Z
+   Last Modification Time 2025-05-29T12:00:00Z
    PDS4 Merge Flag        false
 
 Parsed Input - Attributes:
@@ -103,7 +103,7 @@ Parsed Input - Attributes:
 
    name                   model_timestep_unit
    version                1.23
-   value data type        ASCII_Real
+   value data type        ASCII_Short_String_Collapsed
    description            Identifies the unit of the base model timestep
 
    name                   upper_boundary
@@ -173,11 +173,6 @@ Parsed Input - Attributes:
    value data type        ASCII_Real
    description            The bottom_level attribute provides the bottom most coverage expressed in pressure level.
 
-   name                   level_unit
-   version                1.23
-   value data type        ASCII_Short_String_Collapsed
-   description            The level_unit attribute provides the unit for the vertical grid, e.g. km, Pa, m
-
    name                   postprocessing_methods
    version                1.23
    value data type        ASCII_Short_String_Collapsed
@@ -202,6 +197,11 @@ Parsed Input - Attributes:
    version                1.23
    value data type        ASCII_Short_String_Collapsed
    description            Optional Attribute to identify the variable with a specific standard name (see python script add metadata)
+
+   name                   dimensions
+   version                1.23
+   value data type        ASCII_Short_String_Collapsed
+   description            The dimensions of the variable in the file
 
    name                   dim_name
    version                1.23
@@ -458,6 +458,11 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
+      local identifier      ama:time_unit
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
    name                   File_Description
    description            The file_description sub-class contains attributes that describe the specific file, rather than the original simulation. The intention is to make the data searchable, e.g for a specific location or time of year.
    is abstract            false
@@ -472,11 +477,6 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      ama:bottom_level
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
-      local identifier      ama:level_unit
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
