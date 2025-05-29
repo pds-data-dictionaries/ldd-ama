@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch"
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.sch"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:atm="http://pds.nasa.gov/pds4/atm/v1"
-    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd">
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.xsd">
 
     <name>Atmosphere</name>
     <ldd_version_id>1.2.0.0</ldd_version_id>
@@ -659,7 +659,7 @@
 	            <definition>he description attribute can be used to describe the specific simulation configuration, including specific inputs, parameterizations, variable, processing, etc in greater detail.</definition>
                 <DD_Value_Domain>
                     <enumeration_flag>false</enumeration_flag>
-                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+                    <value_data_type>ASCII_Text_Collapsed</value_data_type>
                 </DD_Value_Domain>
             </DD_Attribute>
 

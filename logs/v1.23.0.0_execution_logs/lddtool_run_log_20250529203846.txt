@@ -1,0 +1,71 @@
+
+>>  INFO LDDTOOL Version: 15.3.0
+>>  INFO IM Version Id: 1.23.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.0
+>>  INFO Date: Thu May 29 20:38:50 UTC 2025
+>>  INFO PARENT_DIR: /tmp/lddtool-15.3.0/Data/
+
+>>> INFO Init:  - Config.Properties Namespace Id Found:ama
+>>> INFO Init:  - Config.Properties Namespace Id Using:ama
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Attribute: <type> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <type> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <type> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <type> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <type> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <type> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <type> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <name> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <northern_boundary> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <northern_boundary> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <southern_boundary> - The default minimum value provided by the attribute's data type is being overridden with -90.0
+>>> INFO Attribute: <southern_boundary> - The default maximum value provided by the attribute's data type is being overridden with 90.0
+>>> INFO Attribute: <eastern_boundary> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <eastern_boundary> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <western_boundary> - The default minimum value provided by the attribute's data type is being overridden with -180.0
+>>> INFO Attribute: <western_boundary> - The default maximum value provided by the attribute's data type is being overridden with 360.0
+>>> INFO Attribute: <start_time> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> INFO Attribute: <description> - This local attribute has a duplicate in the PDS4 data dictionary.
+>>> WARNING Attribute: <level_type> - The 'type' attribute must have at least one permissible value.
+>>> WARNING Attribute: <model_resolution_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <vertical_grid_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <model_timestep_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <time_unit> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+>>> WARNING Attribute: <units> - The terms 'unit', 'units', 'unit_of_measure' should not be used as the rightmost part of an attribute's name.
+
+ -- LDDTool Execution Summary --
+     6 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1N00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-ama/ldd-ama/src/PDS4_AMA_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_AMA_1N00_1200.xsd
+     - ./PDS4_AMA_1N00_1200.sch
+     - ./PDS4_AMA_1N00_1200.xml
+     - ./export/PDS4_PDS_1N00.JSON
+
+>>  INFO Exit(0)
