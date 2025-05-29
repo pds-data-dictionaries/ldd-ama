@@ -659,7 +659,7 @@
 	            <definition>he description attribute can be used to describe the specific simulation configuration, including specific inputs, parameterizations, variable, processing, etc in greater detail.</definition>
                 <DD_Value_Domain>
                     <enumeration_flag>false</enumeration_flag>
-                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
+                    <value_data_type>ASCII_Text_Collapsed</value_data_type>
                 </DD_Value_Domain>
             </DD_Attribute>
 
