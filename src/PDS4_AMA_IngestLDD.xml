@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.sch"
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.sch"
     schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <Ingest_LDD xmlns="http://pds.nasa.gov/pds4/pds/v1"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:atm="http://pds.nasa.gov/pds4/atm/v1"
-    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1N00.xsd">
+    xsi:schemaLocation="http://pds.nasa.gov/pds4/pds/v1 https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1O00.xsd">
 
     <name>Atmosphere</name>
-    <ldd_version_id>1.1.0.0</ldd_version_id>
+    <ldd_version_id>1.2.0.0</ldd_version_id>
     <dictionary_type>Discipline</dictionary_type>
     <full_name>Lyle Huber</full_name>
     <steward_id>atm</steward_id>
@@ -16,7 +16,7 @@
     <comment>
         This dictionary describes the modeling output generic variables
     </comment>
-    <last_modification_date_time>2025-04-11T12:00:00Z</last_modification_date_time>
+    <last_modification_date_time>2025-05-29T12:00:00Z</last_modification_date_time>
 
         <DD_Attribute>
             <name>type</name>
@@ -203,7 +203,7 @@
                 <definition>Identifies the unit of the base model timestep</definition>
                 <DD_Value_Domain>
                     <enumeration_flag>false</enumeration_flag>
-                    <value_data_type>ASCII_Real</value_data_type>
+                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
                 </DD_Value_Domain>
             </DD_Attribute>
 
@@ -367,21 +367,6 @@
                     <value_data_type>ASCII_Real</value_data_type>
                 </DD_Value_Domain>
             </DD_Attribute>
-
-	        
-           <DD_Attribute>
-                <name>level_unit</name>
-                <version_id>1.0</version_id>
-                <local_identifier>level_unit</local_identifier>
-		<nillable_flag>false</nillable_flag>
-                <submitter_name>Victoria Hartwick</submitter_name>
-                <definition>The level_unit attribute provides the unit for the vertical grid, e.g. km, Pa, m</definition>
-                <DD_Value_Domain>
-                    <enumeration_flag>false</enumeration_flag>
-                    <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
-                </DD_Value_Domain>
-            </DD_Attribute>
- 
     
 	        <DD_Attribute>
 	            <name>postprocessing_methods</name>
@@ -450,7 +435,7 @@
                 </DD_Value_Domain>
             </DD_Attribute>
 
-<!--	        <DD_Attribute>
+	        <DD_Attribute>
                 <name>dimensions</name>
                 <version_id>1.0</version_id>
                 <local_identifier>dimensions</local_identifier>
@@ -462,7 +447,7 @@
                     <value_data_type>ASCII_Short_String_Collapsed</value_data_type>
                 </DD_Value_Domain>
             </DD_Attribute>
--->
+            
 
 	        <DD_Attribute>
                 <name>dim_name</name>
@@ -1053,6 +1038,12 @@
 	                    <minimum_occurrences>0</minimum_occurrences>
 	                    <maximum_occurrences>1</maximum_occurrences>
 	                </DD_Association>
+	                <DD_Association>
+	                    <identifier_reference>time_unit</identifier_reference>
+	                    <reference_type>attribute_of</reference_type>
+	                    <minimum_occurrences>0</minimum_occurrences>
+	                    <maximum_occurrences>1</maximum_occurrences>
+	                </DD_Association>
 	            </DD_Class>
     
 
@@ -1075,13 +1066,7 @@
 	                            <reference_type>attribute_of</reference_type>
 	                            <minimum_occurrences>0</minimum_occurrences>
 	                            <maximum_occurrences>1</maximum_occurrences>
-	                        </DD_Association>	
-			        <DD_Association>
-	                            <identifier_reference>level_unit</identifier_reference>
-	                            <reference_type>attribute_of</reference_type>
-	                            <minimum_occurrences>0</minimum_occurrences>
-	                            <maximum_occurrences>1</maximum_occurrences>
-	                        </DD_Association>	
+	                        </DD_Association>	                
 	                        <DD_Association>
 	                            <identifier_reference>start_time</identifier_reference>
 	                            <reference_type>attribute_of</reference_type>
