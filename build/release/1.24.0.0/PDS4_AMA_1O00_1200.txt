@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu May 29 20:31:15 UTC 2025
+   Time                   Thu May 29 20:38:44 UTC 2025
    Common Schema          [PDS4_PDS_1O00.xsd]
    Common Schematron      [PDS4_PDS_1O00.sch]
    IM Version Id:         1.24.0.0
@@ -280,7 +280,7 @@ Parsed Input - Attributes:
 
    name                   description
    version                1.24
-   value data type        ASCII_Short_String_Collapsed
+   value data type        ASCII_Text_Collapsed
    description            he description attribute can be used to describe the specific simulation configuration, including specific inputs, parameterizations, variable, processing, etc in greater detail.
 
    name                   var_type

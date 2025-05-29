@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version     3.7.0
-   Date        2025-05-29T20:31:25Z
+   Date        2025-05-29T20:38:56Z
 
 Parameters:
-   Targets                        [file:/home/runner/work/ldd-ama/ldd-ama/build/development/7ad55b34e00d18021d7897787703ef67dceffa48/1.23.0.0/PDS4_AMA_1N00_1200.xml]
+   Targets                        [file:/home/runner/work/ldd-ama/ldd-ama/build/development/bc76e6f60649f5c2e2f0a80663ff086d891210ae/1.23.0.0/PDS4_AMA_1N00_1200.xml]
    Rule Type                      pds4.label
-   User Specified Schemas         [file:/home/runner/work/ldd-ama/ldd-ama/build/development/7ad55b34e00d18021d7897787703ef67dceffa48/1.23.0.0/PDS4_AMA_1N00_1200.xsd, file:/tmp/PDS4_PDS_1N00.xsd]
-   User Specified Schematrons     [file:/home/runner/work/ldd-ama/ldd-ama/build/development/7ad55b34e00d18021d7897787703ef67dceffa48/1.23.0.0/PDS4_AMA_1N00_1200.sch, file:/tmp/PDS4_PDS_1N00.sch]
+   User Specified Schemas         [file:/home/runner/work/ldd-ama/ldd-ama/build/development/bc76e6f60649f5c2e2f0a80663ff086d891210ae/1.23.0.0/PDS4_AMA_1N00_1200.xsd, file:/tmp/PDS4_PDS_1N00.xsd]
+   User Specified Schematrons     [file:/home/runner/work/ldd-ama/ldd-ama/build/development/bc76e6f60649f5c2e2f0a80663ff086d891210ae/1.23.0.0/PDS4_AMA_1N00_1200.sch, file:/tmp/PDS4_PDS_1N00.sch]
    Severity Level                 WARNING
    Recurse Directories            true
    File Filters Used              [*.xml, *.XML]
@@ -22,7 +22,7 @@ Parameters:
 
 Product Level Validation Results
 
-  PASS: file:/home/runner/work/ldd-ama/ldd-ama/build/development/7ad55b34e00d18021d7897787703ef67dceffa48/1.23.0.0/PDS4_AMA_1N00_1200.xml
+  PASS: file:/home/runner/work/ldd-ama/ldd-ama/build/development/bc76e6f60649f5c2e2f0a80663ff086d891210ae/1.23.0.0/PDS4_AMA_1N00_1200.xml
         1 product validation(s) completed
 
 Summary:
@@ -45,5 +45,5 @@ Summary:
 
 
 End of Report
-Completed execution in 5847 ms
+Completed execution in 6853 ms
 
