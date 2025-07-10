@@ -7,7 +7,7 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Thu May 29 20:28:02 UTC 2025
+   Time                   Thu Jul 10 19:55:49 UTC 2025
    Common Schema          [PDS4_PDS_1N00.xsd]
    Common Schematron      [PDS4_PDS_1N00.sch]
    IM Version Id:         1.23.0.0
@@ -29,8 +29,8 @@ Parameters:
 
 Summary:
    Classes                7
-   Attributes             55
-   Associations           70
+   Attributes             56
+   Associations           71
    Error messages         0
    Warning messages       0
    Information messages   0
@@ -173,6 +173,11 @@ Parsed Input - Attributes:
    value data type        ASCII_Real
    description            The bottom_level attribute provides the bottom most coverage expressed in pressure level.
 
+   name                   level_unit
+   version                1.23
+   value data type        ASCII_Short_String_Collapsed
+   description            The level_unit attribute provides the unit of pressure in the output file.
+
    name                   postprocessing_methods
    version                1.23
    value data type        ASCII_Short_String_Collapsed
@@ -280,7 +285,7 @@ Parsed Input - Attributes:
 
    name                   description
    version                1.23
-   value data type        ASCII_Short_String_Collapsed
+   value data type        ASCII_Text_Collapsed
    description            he description attribute can be used to describe the specific simulation configuration, including specific inputs, parameterizations, variable, processing, etc in greater detail.
 
    name                   var_type
@@ -378,11 +383,6 @@ Parsed Input - Classes:
 
    Associations
 
-      local identifier      ama:description
-      minimum occurrences   0
-      maximum occurrences   1
-      reference type        attribute_of
-
       local identifier      ama:horizontal_grid_type
       minimum occurrences   0
       maximum occurrences   1
@@ -463,6 +463,11 @@ Parsed Input - Classes:
       maximum occurrences   1
       reference type        attribute_of
 
+      local identifier      ama:description
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
    name                   File_Description
    description            The file_description sub-class contains attributes that describe the specific file, rather than the original simulation. The intention is to make the data searchable, e.g for a specific location or time of year.
    is abstract            false
@@ -477,6 +482,11 @@ Parsed Input - Classes:
       reference type        attribute_of
 
       local identifier      ama:bottom_level
+      minimum occurrences   0
+      maximum occurrences   1
+      reference type        attribute_of
+
+      local identifier      ama:level_unit
       minimum occurrences   0
       maximum occurrences   1
       reference type        attribute_of
