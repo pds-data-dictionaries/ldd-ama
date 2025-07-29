@@ -2,12 +2,12 @@ PDS4 Local Data Dictionary Processing Report
 
 Configuration:
    LDDTool Version        15.3.0
-   LDD Version Id:        1.2.0.0
+   LDD Version Id:        1.3.0.0
    LDD Label Version Id:  1.0
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Tue Jul 29 16:34:37 UTC 2025
+   Time                   Tue Jul 29 20:36:03 UTC 2025
    Common Schema          [PDS4_PDS_1N00.xsd]
    Common Schematron      [PDS4_PDS_1N00.sch]
    IM Version Id:         1.23.0.0
@@ -39,7 +39,7 @@ Detailed validation messages
 
 Parsed Input - Header:
    LDD Name               Atmosphere
-   LDD Version            1.2.0.0
+   LDD Version            1.3.0.0
    Full Name              Lyle Huber
    Steward                atm
    Namespace Id           ama
