@@ -7,10 +7,10 @@ Configuration:
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Mon Jul 28 21:40:13 UTC 2025
-   Common Schema          [PDS4_PDS_1N00.xsd]
-   Common Schematron      [PDS4_PDS_1N00.sch]
-   IM Version Id:         1.23.0.0
+   Time                   Tue Jul 29 16:34:39 UTC 2025
+   Common Schema          [PDS4_PDS_1O00.xsd]
+   Common Schematron      [PDS4_PDS_1O00.sch]
+   IM Version Id:         1.24.0.0
    IM Namespace Id:       pds
    IM Label Version Id:   1.0
    IM Object Model        [UpperModel.pont]
@@ -52,72 +52,72 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   type
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Model Type (e.g GCM, MESOSCALE, ASSIMILATION)
 
    name                   name
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Describes the name of the model (e.g NASA Ames Mars MGCM)
 
    name                   version
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Identifies the specific version of the model (e.g v3.0)
 
    name                   institution
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Identifies the host institution or author of the model
 
    name                   horizontal_grid_type
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Identifies the native horizontal grid of the model (e.g lat/lon, cube sphere, etc)
 
    name                   model_resolution
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            identifies the horizontal resolution (dx,dy) of the model in km, m, degrees.
 
    name                   model_resolution_unit
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            identifies the unit of the horizontal grid km, m, degrees.
 
    name                   vertical_grid_type
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Identifies the vertical grid type (e.g. SIGMA, HYBRID-SIGMA, ALTITUDE, PRESSURE)
 
    name                   vertical_grid_unit
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Identifies the unit of the vertical grid type (e.g. Pa, mbar, km, m)
 
    name                   model_timestep
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            Identifies the base model timestep
 
    name                   model_timestep_unit
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Identifies the unit of the base model timestep
 
    name                   upper_boundary
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The lower_boundary attribute provides the top most coverage limit in levels such as pressure
 
    name                   lower_boundary
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The lower_boundary attribute provides the bottom most coverage limit in levels such as pressure
 
    name                   northern_boundary
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The northern_boundary attribute provides the northern most coordinate of the limit of coverage expressed in latitude.
    minimum value          -90.0
@@ -125,7 +125,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   southern_boundary
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The southern_boundary attribute provides the southern most coordinate of the limit of coverage expressed in latitude.
    minimum value          -90.0
@@ -133,7 +133,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   eastern_boundary
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The eastern_boundary attribute provides the eastern most coordinate of the limit of coverage expressed in longitude
    minimum value          -180.0
@@ -141,7 +141,7 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   western_boundary
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The western_boundary attribute provides the western most coordinate of the limit of coverage expressed in longitude. 
    minimum value          -180.0
@@ -149,199 +149,199 @@ Parsed Input - Attributes:
    unit of measure type   Units_of_Angle
 
    name                   start_time
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The start_time attribute provides the coverage start time expressed in any format of time
 
    name                   end_time
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The end_time attribute provides the coverage end time expressed in any format of time.
 
    name                   time_unit
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The time_unit attribute provides the unit of time in the output file.
 
    name                   top_level
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The top_level attribute provides the top most coverage expressed in pressure level
 
    name                   bottom_level
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The bottom_level attribute provides the bottom most coverage expressed in pressure level.
 
    name                   level_unit
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The level_unit attribute provides the unit of pressure in the output file.
 
    name                   postprocessing_methods
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            a description of post-processing operating on all data in the file, including time mean, interpolation etc. Methodology can be described in text or using netcdf standard recommendations for cell_methods (e.g. for a zonal time-mean with a three hour interval, 'time:mean(interval=3 hours) longitude:mean'
 
    name                   variable_name
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The name of the variable in the file
 
    name                   long_name
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The long name of the variable in the file
 
    name                   fieldnam
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            A description of the variable (up to 30 characters).
 
    name                   standard_name
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Optional Attribute to identify the variable with a specific standard name (see python script add metadata)
 
    name                   dimensions
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The dimensions of the variable in the file
 
    name                   dim_name
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The names of dimensions the variable in the file
 
    name                   interval
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The interval size of the coordinate space, used for uniform grids, specify 'non-uniform' if coordinate grid spacing is non-uniform.
 
    name                   units
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The unit of the variable in the file
 
    name                   level_type
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            level/model/height at which variable is outputted
 
    name                   validmin
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The minimum valid value for a variable.
 
    name                   validmax
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The maximum valid value for a variable.
 
    name                   missing_value
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The unit of the variable in the file
 
    name                   scale_factor
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description             scale factor provides the multiplier to the packed value, unpacked_value=packed_value * scale_factor + add_offset
 
    name                   add_offset
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            add_offset if there is any; scale factor and add offset are used to reduce the storage space of packed variable unpacked_value = packed_value * scale_factor + add_offset
 
    name                   stagger
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The unit of the variable in the file
 
    name                   memory_order
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The memory order of the variable in the file
 
    name                   catdesk
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Approximately 80-character string which is a textual description of the variable
 
    name                   format
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The format of the variable in the file
 
    name                   monoton
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Whether the variable is monotonically increasing or monotonically decreasing. A value of INCREASE indicates strictly increasing values, DECREASE strictly decreasing values, or FALSE indicates not monotonic
 
    name                   fillval
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The value used for missing or invalid variable values.
 
    name                   description
-   version                1.23
+   version                1.24
    value data type        ASCII_Text_Collapsed
    description            he description attribute can be used to describe the specific simulation configuration, including specific inputs, parameterizations, variable, processing, etc in greater detail.
 
    name                   var_type
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Identifies a variable as either data, support_data, metadata or ignore_data.
 
    name                   cell_methods
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            ia string attribute comprising a list of blank-separated words of the form "name: method". Each "name: method" pair indicates that for an axis identified by name, the cell values representing the field have been determined or derived by the specified method. For example, if data values have been generated by computing time means, then this could be indicated with cell_methods="time:mean(interval=2 hours)"
 
    name                   formula_terms
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            an attribute used to associate terms in the definitions with variables in a netCDF file
 
    name                   coord_name
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            The name of the variable in the file
 
    name                   axis
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            Identifies latitude, longitude, vertical, or time axes.
 
    name                   positive
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description             the direction in which the coordinate values are increasing
 
    name                   calendar
-   version                1.23
+   version                1.24
    value data type        ASCII_Short_String_Collapsed
    description            In order to calculate a new date and time given a base date, base time and a time increment one must know what calendar to use. For this purpose we recommend that the calendar be specified by the attribute calendar which is assigned to the time coordinate variable.
 
    name                   day_length
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            The unit of the variable in the file
    unit of measure type   Units_of_Time
 
    name                   month_length
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            If none of the calendar types apply, a non-standard calendar can be defined. The user must explicitly define the number of days per month
    unit of measure type   Units_of_Time
 
    name                   maximum_boundary
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            the maximum boundary of the coordinate
 
    name                   minimum_boundary
-   version                1.23
+   version                1.24
    value data type        ASCII_Real
    description            the minimum boundary of the coordinate
 
