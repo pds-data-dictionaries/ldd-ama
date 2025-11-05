@@ -1,10 +1,10 @@
 
->>  INFO LDDTOOL Version: 15.3.0
+>>  INFO LDDTOOL Version: 16.0.0
 >>  INFO IM Version Id: 1.24.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.0
->>  INFO Date: Tue Jul 29 20:36:03 UTC 2025
->>  INFO PARENT_DIR: /tmp/lddtool-15.3.0/Data/
+>>  INFO Date: Wed Nov 05 20:47:04 UTC 2025
+>>  INFO PARENT_DIR: /tmp/lddtool-16.0.0/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:ama
 >>> INFO Init:  - Config.Properties Namespace Id Using:ama
@@ -57,6 +57,7 @@ Input:
      - IM Version: 1O00
      - PDS4 Flag: true
      - LDD Flag: true
+     - IM Version: true
      - Export JSON Flag: true
 
      - Ingest LDD(s): /home/runner/work/ldd-ama/ldd-ama/src/PDS4_AMA_IngestLDD.xml
