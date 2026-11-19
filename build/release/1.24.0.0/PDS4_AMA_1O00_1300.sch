@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:ama  Version:1.3.0.0 - Fri Apr 24 16:46:00 UTC 2026 -->
+  <!-- PDS4 Schematron for Name Space Id:ama  Version:1.3.0.0 - Thu Nov 19 22:28:43 UTC 2026 -->
   <!-- Generated from the PDS4 Information Model Version 1.24.0.0 - System Build 15.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -33,20 +33,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="ama:Coordinate/ama:day_length">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>ama:Coordinate/ama:day_length/ama:day_length</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="ama:Coordinate/ama:month_length">
-      <sch:assert test="@unit = ('day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr')">
-        <title>ama:Coordinate/ama:month_length/ama:month_length</title>
-        The attribute @unit must be equal to one of the following values 'day', 'hr', 'julian day', 'microseconds', 'min', 'ms', 'ns', 's', 'yr'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="ama:Coordinate/ama:positive">
       <sch:assert test=". = ('Down', 'Up')">
         <title>ama:Coordinate/ama:positive/ama:positive</title>
@@ -61,13 +47,6 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="ama:Simulation_Configuration/ama:eastern_boundary">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>ama:Simulation_Configuration/ama:eastern_boundary/ama:eastern_boundary</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="ama:Simulation_Configuration/ama:horizontal_grid_type">
       <sch:assert test=". = ('cube-sphere', 'icosahedral', 'lat-lon')">
         <title>ama:Simulation_Configuration/ama:horizontal_grid_type/ama:horizontal_grid_type</title>
@@ -75,31 +54,10 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="ama:Simulation_Configuration/ama:northern_boundary">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>ama:Simulation_Configuration/ama:northern_boundary/ama:northern_boundary</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="ama:Simulation_Configuration/ama:southern_boundary">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>ama:Simulation_Configuration/ama:southern_boundary/ama:southern_boundary</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
     <sch:rule context="ama:Simulation_Configuration/ama:vertical_grid_type">
       <sch:assert test=". = ('Altitude', 'Hybrid-Sigma', 'Isentropic', 'Pressure', 'Sigma')">
         <title>ama:Simulation_Configuration/ama:vertical_grid_type/ama:vertical_grid_type</title>
         The attribute ama:Simulation_Configuration/ama:vertical_grid_type must be equal to one of the following values 'Altitude', 'Hybrid-Sigma', 'Isentropic', 'Pressure', 'Sigma'.</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:rule context="ama:Simulation_Configuration/ama:western_boundary">
-      <sch:assert test="@unit = ('arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad')">
-        <title>ama:Simulation_Configuration/ama:western_boundary/ama:western_boundary</title>
-        The attribute @unit must be equal to one of the following values 'arcmin', 'arcsec', 'deg', 'hr', 'microrad', 'mrad', 'rad'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
